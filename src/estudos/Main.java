@@ -9,7 +9,11 @@ public class Main {
         /* Aluno é um atributo */
         /* new Aluno() é uma instância (Criação de objeto) */
         /* a variavel aluno1 é uma referência para o objeto aluno*/
-        Aluno aluno1 = new Aluno(); /* Este será o João */
+
+        Aluno aluno1 = new Aluno();
+        aluno1.setNome("João da Silva");
+
+        System.out.println("O nome é: " + aluno1.getNome());
 
         Aluno aluno2 = new Aluno(); /* Este será o Pedro */
 
