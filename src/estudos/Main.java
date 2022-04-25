@@ -1,6 +1,7 @@
 package estudos;
 
 import estudospoo.classes.Aluno;
+import javax.swing.*;
 
 public class Main {
 
@@ -22,27 +23,39 @@ public class Main {
         aluno1.setSerieMatriculado("5");
         aluno1.setNomeEscola("Escola JDEV Treinamento");
 
+        aluno1.setNota1(Double.parseDouble(JOptionPane.showInputDialog("Qual a nota 1?")));
+        aluno1.setNota2(Double.parseDouble(JOptionPane.showInputDialog("Qual a nota 2?")));
+        aluno1.setNota3(Double.parseDouble(JOptionPane.showInputDialog("Qual a nota 3?")));
+        aluno1.setNota4(Double.parseDouble(JOptionPane.showInputDialog("Qual a nota 4?")));
+
+        double resultado = (aluno1.getMediaNota()) / 4 ;
+
+        System.out.println("-----------------------------------");
         System.out.println("O nome é: " + aluno1.getNome());
         System.out.println("A idade é: " + aluno1.getIdade());
         System.out.println("A data de nascimento é: " + aluno1.getDataNascimento());
+        System.out.println("A nota é: " + resultado);
 
+        if (resultado >= 5){
+            if (resultado >= 9){
+                JOptionPane.showMessageDialog(null,"Você foi aprovado com louvor!");
+            } else if (resultado >= 7){
+                JOptionPane.showMessageDialog(null,"Você está aprovado!");
+            } else {
+                JOptionPane.showMessageDialog(null,"Você está em recuperação!");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null,"Você está reprovado!");
+        }
         System.out.println("-----------------------------------");
 
-        Aluno aluno2 = new Aluno(); /* Este será o Pedro */
-        aluno2.setNome("Pedro");
-        aluno2.setIdade(40);
-        aluno2.setDataNascimento("10/10/1991");
+        Aluno aluno2 = new Aluno();
 
-        System.out.println("O nome é: " + aluno2.getNome());
-        System.out.println("A idade é: " + aluno2.getIdade());
-        System.out.println("A data de nascimento é: " + aluno2.getDataNascimento());
+        Aluno aluno3 = new Aluno();
 
+        Aluno aluno4 = new Aluno();
 
-        Aluno aluno3 = new Aluno(); /* Este será o Alex */
-
-        Aluno aluno4 = new Aluno("Maria");
-
-        Aluno aluno5 = new Aluno("José", 50);
+        Aluno aluno5 = new Aluno();
 
     }
 }
