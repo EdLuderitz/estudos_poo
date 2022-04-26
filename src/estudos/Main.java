@@ -53,5 +53,6 @@ public class Main {
         System.out.println("A nota é: " + aluno1.getMediaNota());
         System.out.println("O aluno foi: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
         System.out.println(aluno1.getAlunoAprovado2());
+        System.out.println(aluno1);
     }
 }
