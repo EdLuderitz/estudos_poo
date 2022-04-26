@@ -1,5 +1,7 @@
 package estudospoo.classes;
 
+import javax.swing.*;
+
 /* Está é nossa classe/objeto que representa o aluno */
 public class Aluno {
 
@@ -132,7 +134,7 @@ public class Aluno {
     }
 
     public double getMediaNota() {
-        return (nota1 + nota2 + nota3 + nota4);
+        return ((nota1 + nota2 + nota3 + nota4) / 4);
     }
 
     public boolean getAlunoAprovado() {
@@ -146,10 +148,16 @@ public class Aluno {
 
     public String getAlunoAprovado2() {
         double media = this.getMediaNota();
-        if (media >= 7) {
-            return "Aluno foi aprovado";
+        if (media >= 5) {
+            if (media >= 9) {
+                return "Você foi aprovado com louvor!";
+            } else if (media >= 7) {
+                return "Você está aprovado!";
+            } else {
+                return "Você está em recuperação";
+            }
         } else {
-            return "Aluno foi reprovado!";
+            return "Você está reprovado";
         }
     }
 }
