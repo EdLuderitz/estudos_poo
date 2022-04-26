@@ -19,11 +19,11 @@ public class Aluno {
     private double nota3;
     private double nota4;
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
@@ -133,5 +133,23 @@ public class Aluno {
 
     public double getMediaNota() {
         return (nota1 + nota2 + nota3 + nota4);
+    }
+
+    public boolean getAlunoAprovado() {
+        double media = this.getMediaNota();
+        if (media >= 7) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String getAlunoAprovado2() {
+        double media = this.getMediaNota();
+        if (media >= 7) {
+            return "Aluno foi aprovado";
+        } else {
+            return "Aluno foi reprovado!";
+        }
     }
 }

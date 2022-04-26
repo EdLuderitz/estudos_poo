@@ -35,6 +35,7 @@ public class Main {
         System.out.println("A idade é: " + aluno1.getIdade());
         System.out.println("A data de nascimento é: " + aluno1.getDataNascimento());
         System.out.println("A nota é: " + resultado);
+        System.out.println("O aluno foi: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 
         if (resultado >= 5){
             if (resultado >= 9){
@@ -48,6 +49,9 @@ public class Main {
             JOptionPane.showMessageDialog(null,"Você está reprovado!");
         }
         System.out.println("-----------------------------------");
+
+
+
 
         Aluno aluno2 = new Aluno();
 
