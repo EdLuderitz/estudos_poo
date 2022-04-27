@@ -11,7 +11,7 @@ public class Main {
         /* Aluno é um atributo */
         /* new Aluno() é uma instância (Criação de objeto) */
         /* a variavel aluno1 é uma referência para o objeto aluno*/
-
+/*
         String nome = JOptionPane.showInputDialog("Qual o nome do Aluno(a)?");
 
         Aluno aluno1 = new Aluno();
@@ -45,8 +45,6 @@ public class Main {
         aluno1.setNota3(Double.parseDouble(nota3));
         aluno1.setNota4(Double.parseDouble(nota4));
 
-
-        /* Falta adicionar alguns print dos dados adicionados nos sets acima */
         System.out.println("O nome é: " + aluno1.getNome());
         System.out.println("A idade é: " + aluno1.getIdade());
         System.out.println("A data de nascimento é: " + aluno1.getDataNascimento());
@@ -54,5 +52,23 @@ public class Main {
         System.out.println("O aluno foi: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
         System.out.println(aluno1.getAlunoAprovado2());
         System.out.println(aluno1);
+        */
+
+        /* Equals e hashcode (Diferenciar Objetos e comparar objetos) */
+        Aluno aluno1 = new Aluno();
+        aluno1.setNome("Alex");
+        aluno1.setNumeroCpf("123");
+
+        Aluno aluno2 = new Aluno();
+        aluno2.setNome("Alex");
+        aluno2.setNumeroCpf("1234");
+
+        if (aluno1.equals(aluno2)){
+            System.out.println("Alunos são iguais");
+
+        } else {
+            System.out.println("Alunos não são iguais");
+        }
+
     }
 }

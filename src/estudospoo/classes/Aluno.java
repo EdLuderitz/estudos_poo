@@ -1,6 +1,7 @@
 package estudospoo.classes;
 
 import javax.swing.*;
+import java.util.Objects;
 
 /* Está é nossa classe/objeto que representa o aluno */
 public class Aluno {
@@ -179,5 +180,18 @@ public class Aluno {
                 ", nota3=" + nota3 +
                 ", nota4=" + nota4 +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Aluno)) return false;
+        Aluno aluno = (Aluno) o;
+        return Objects.equals(getNome(), aluno.getNome()) && Objects.equals(getNumeroCpf(), aluno.getNumeroCpf());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNome(), getNumeroCpf());
     }
 }
