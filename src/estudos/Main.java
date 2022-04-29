@@ -51,6 +51,7 @@ public class Main {
 
         System.out.println("O nome é: " + aluno1.getNome());
         System.out.println("O RG é: " + aluno1.getRegistroGeral());
+        System.out.println("O CPF é: " + aluno1.getNumeroCpf());
         System.out.println("A idade é: " + aluno1.getIdade());
         System.out.println("A data de nascimento é: " + aluno1.getDataNascimento());
         System.out.println("A nota é: " + aluno1.getMediaNota());
